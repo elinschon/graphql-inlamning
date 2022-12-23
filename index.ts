@@ -14,7 +14,7 @@ export let wishList = [
     {id: 100, wishes: ['Doll', 'Car']},
     {id: 101, wishes: ['Puppy', 'Book']},
     {id: 102, wishes: ['Shoes', 'Lego']},
-]
+];
 
 // Schema
 //--------------------//
@@ -23,20 +23,17 @@ export const schema = buildSchema(`
         getChild(id: Int!): Child
         getChildren: [Child]
     }
-
     type Child {
         id: Int!
         name: String!
         wish: String!
         nice: Boolean!
     }
-
     input ChildInput {
         name: String!
         wish: String!
         nice: Boolean!
     }
-
     type Mutation {
         createChild(input: ChildInput): Child
         updateChild(id: Int!, input: ChildInput): Child
